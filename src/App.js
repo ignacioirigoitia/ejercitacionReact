@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import FunctionComponent from './Components/FunctionComponent';
+import ClassComponent from "./Components/ClassComponent";
+import StatefullComponent from "./Components/StatefullComponent";
+import Event from "./Components/Events"
 
 function App() {
   return (
@@ -17,6 +21,18 @@ function App() {
         >
           Learn React
         </a>
+        <hr/>
+        <FunctionComponent
+          name = "Penzio"
+        />
+        <hr/>
+        <ClassComponent 
+          date={new Date()}
+        />
+        <hr/>
+        <StatefullComponent/>
+        <hr/>
+        <Event/>
       </header>
     </div>
   );

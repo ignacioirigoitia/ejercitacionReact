@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+hr{
+  width: 100vw;
+  height: 4px;
+  color: salmon;
+  background-color: salmon;
+}
