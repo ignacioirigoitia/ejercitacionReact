@@ -4,8 +4,15 @@ import FunctionComponent from './Components/FunctionComponent';
 import ClassComponent from "./Components/ClassComponent";
 import StatefullComponent from "./Components/StatefullComponent";
 import Event from "./Components/Events"
+import Hooks from './Components/Hooks';
+import { useState } from 'react';
 
 function App() {
+
+  const [ title, setTitle ] = useState("");
+
+  document.title = `${title}`
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +28,8 @@ function App() {
         >
           Learn React
         </a>
+        <hr />
+        <input onChange={(e) => {setTitle(e.target.value)}}/>
         <hr/>
         <FunctionComponent
           name = "Penzio"
@@ -33,6 +42,8 @@ function App() {
         <StatefullComponent/>
         <hr/>
         <Event/>
+        <hr/>
+        <Hooks setTitle={setTitle} title={title}/>
       </header>
     </div>
   );
